@@ -42,22 +42,22 @@ class Imagehandler(object):
         thresholdImage, contours, hierarchy = cv.findContours(
             thresholdImage, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
         self.Contours = contours
-         uncomment this to see the contours on the image
-         cv2.drawContours(thresholdImage, contours, -1, (0,255,0), 3)
-         patternFindingObj=PatternFinding()
-         areas= [cv.contourArea(contour) for contour in contours]
-         for index in xrange(len(contours)):
-             IsPattern=self.IsPossibleQRContour(index)
-             if IsPattern is True:
-                 x,y,w,h=cv.boundingRect(contours[index])
-                 cv.rectangle(self.imageOriginal,(x,y),(x+w,y+h),(0,0,255),2)
-                 cv.imshow("hello",self.imageOriginal)
-         maxAreaIndex=np.argmax(areas)
-         x,y,w,h=cv.boundingRect(contours[maxAreaIndex])
-         cv.rectangle(self.image2,(x,y),(x+w,y+h),(0,255,0),2)
-         cv.imshow("hello",self.imageOriginal)
-         cv.waitKey(0)
-        cv.destroyAllWindows()
+         #uncomment this to see the contours on the image
+         #cv2.drawContours(thresholdImage, contours, -1, (0,255,0), 3)
+         #patternFindingObj=PatternFinding()
+         #areas= [cv.contourArea(contour) for contour in contours]
+         #for index in xrange(len(contours)):
+          #   IsPattern=self.IsPossibleQRContour(index)
+           #  if IsPattern is True:
+            #     x,y,w,h=cv.boundingRect(contours[index])
+             #    cv.rectangle(self.imageOriginal,(x,y),(x+w,y+h),(0,0,255),2)
+              #   cv.imshow("hello",self.imageOriginal)
+        # maxAreaIndex=np.argmax(areas)
+         #x,y,w,h=cv.boundingRect(contours[maxAreaIndex])
+         #cv.rectangle(self.image2,(x,y),(x+w,y+h),(0,255,0),2)
+         #cv.imshow("hello",self.imageOriginal)
+         #cv.waitKey(0)
+        #cv.destroyAllWindows()
         contour_group = (thresholdImage, contours, hierarchy)
         return contour_group
 
