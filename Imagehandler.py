@@ -6,7 +6,7 @@ from AffineTransformation import AffineTransformation
 
 import cv2 as cv
 import os.path
-print("i am here")
+#print("i am here")
 
 class Imagehandler(object):
     def __init__(self, image):
