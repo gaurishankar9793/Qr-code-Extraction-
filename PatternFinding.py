@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on  Jul 16 21:56:30 2016
 
-@author: Ankit Singh
-"""
 import cv2 as cv
 import numpy as np
 
