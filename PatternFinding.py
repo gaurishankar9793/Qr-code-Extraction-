@@ -77,8 +77,8 @@ class PatternFinding(object):
                 x, y, w, h = cv.boundingRect(self.Contours[mapping])
                 cv.rectangle(
                     self.image, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                cv.imshow('contour of qr', self.image)         #uncomment to debug
-                cv.waitKey(0)
+                #cv.imshow('contour of qr', self.image)         #uncomment to debug
+                #cv.waitKey(0)
                 QRPatterns.append(patterns[ind])
                 #cv.destroyAllWindows()
         if len(QRPatterns) > 3:
